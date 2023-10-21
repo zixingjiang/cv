@@ -1,0 +1,375 @@
+%-------------------------
+% Resume in Latex
+% Author : Zixing Jiang
+% Based off of: https://www.overleaf.com/latex/templates/jakes-resume-anonymous/cstpnrbkhndn
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\usepackage{lastpage}
+\usepackage{datetime}
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[L]{\thepage\ / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+%\newcommand{\resumeProjectHeading}[2]{
+%    \item
+%    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+%      \small#1 & \textbf{\small #2}\\
+%    \end{tabular*}\vspace{-7pt}
+%}
+
+\newcommand{\resumeProjectHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumePubHeading}[1]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Zixing Jiang} \\ \vspace{1pt}
+    %Sha Tin, Hong Kong SAR, China\\ 
+    \vspace{0.3em}
+    \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ (+86) 133-0585-1000 ~ \href{mailto:zixingjiang@link.cuhk.edu.cn}{\raisebox{-0.2\height}\faEnvelope\  \underline{\textcolor{black}{zixingjiang@link.cuhk.edu.cn}}} ~ 
+    \href{https://www.zixingjiang.com}{\raisebox{-0.2\height}\faUserCircle\ \underline{\textcolor{black}{zixingjiang.com}}}  ~
+    \href{https://github.com/zixingjiang}{\raisebox{-0.2\height}\faGithub\ \underline{\textcolor{black}{github.com/zixingjiang}}}
+    \vspace{-8pt}
+\end{center}
+
+%------RESEARCH INTERESTS-------
+\section{\faSearch\ Research Interest}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+    My research interest lies in achieving safe, stable, efficient, innovative, minimally invasive surgery, rehabilitation, and other medical procedures with the help of advanced engineering technologies such as robotics, artificial intelligence, computer vision, force sensing, etc. Additionally, I am interested in finding inspiration from nature creatures to optimize my robotic systems.\\
+	\textbf{Keywords}: Robot-assisted Medical Procedures, Image- and Force-guided Robotic System, Bio-inspired Robotics.
+    }}
+ \end{itemize}
+
+%-----------EDUCATION-----------
+\section{\faGraduationCap\ Education}
+\resumeSubHeadingListStart
+
+%\resumeSubheading
+%{The Chinese University of Hong Kong (CUHK)}{Sept. 2026 -- May 2029}{Doctor of Philosophy in Surgery}{HKSAR, China}
+%\resumeItemListStart
+%\resumeItem{Thesis: Robot-assisted Surgery, supervised by \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{\textcolor{blue}{Prof. Zheng Li}} and \href{https://www4.mae.cuhk.edu.hk/peoples/au-kwok-wai-samuel/}{\textcolor{blue}{Prof. Semual Au}}.}
+%\resumeItemListEnd
+
+%\resumeSubheading
+%{CUHK}{Sept. 2024 -- May 2026}{Master of Philosophy in Surgery}{HKSAR, China}
+%\resumeItemListStart
+%\resumeItem{Thesis: Robot-assisted Surgery, supervised by Prof. Zheng Li.}
+%\resumeItem{Relevant coursework: Model Predictive Control, Advanced Robotics, Biostatistics, etc.}
+%\resumeItemListEnd
+
+\resumeSubheading
+{The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen)}{Sept. 2019 -- May 2023}{Bachelor of Engineering in Electronic Information Engineering, Computer Engineering Stream}{Shenzhen, China}
+\resumeItemListStart
+\resumeItem{Completed with Honors, First Class.}
+\resumeItem{Final Year Project (FYP): Control of The Multi-joint Manipulator for Grasping on Water Surface (Distinction), supervised by \href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{\textcolor{blue}{Prof. Huihuan Qian}}.}
+\resumeItem{Relevant coursework: Robotics and Intelligent Systems, Automatic Control Theory, Programming for Robotics, Image Processing and Computer Vision, Reinforcement Learning, Artificial Intelligence, Parallel Programming, Signals and Systems, etc.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%%------RELEVANT COURSEWORK-------
+%\section{Relevant Coursework}
+%    %\resumeSubHeadingListStart
+%        \begin{multicols}{4}
+%            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                \item\small Data Structures
+%                \item Software Methodology
+%                \item Algorithms Analysis
+%                \item Database Management
+%                \item Artificial Intelligence
+%                \item Internet Technology
+%                \item Systems Programming
+%                \item Computer Architecture
+%            \end{itemize}
+%        \end{multicols}
+%        \vspace*{2.0\multicolsep}
+%    %\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{\faUsers\ Experience}
+ \resumeSubHeadingListStart
+
+\resumeSubheading{Department of Surgery, The Chinese University of Hong Kong}{Incoming}{Research Assistant}{Sha Tin, HKSAR}
+\resumeItemListStart
+\resumeItem{Will work in a team to develop a lightweight, intelligent, and remote ultrasound robotic system under the supervision of \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{\textcolor{blue}{Prof. Zheng Li}}.}
+\resumeItemListEnd
+
+\resumeSubheading{Robotics and Artificial Intelligence Laboratory (RAIL), CUHK-Shenzhen}{Sept. 2020 -- Oct. 2023}{Student Research Intern}{Shenzhen, China}
+\resumeItemListStart
+\resumeItem{Assisted in research on robot-assisted autonomous ultrasound, under the supervision of \href{https://sse.cuhk.edu.cn/en/faculty/sunzhenglong}{\textcolor{blue}{Prof. Zhenglong Sun}}, from March 2023 to October 2023. }
+\resumeItem{Assisted in research on manipulator-assisted unmanned aerial vehicle (UAV) landing on water surface and control of floating-based manipulator, under the supervision of Prof. Huihuan Qian, from September 2020 to February 2023.}
+\resumeItem{Assisted in  building robot prototypes (including mechanical design, electronics design, and robot programming), conducting experiments, and drafting research papers.}
+\resumeItemListEnd    
+\resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PUBLICATIONS-----------
+\section{\faBook\ Publications}
+(\# indicates co-first authors, * indicates corresponding authors) 
+%You may check my full publication list on \href{URL}{\textcolor{blue}{[Google Scholar]}}.
+\vspace{-16pt}
+\resumeSubHeadingListStart
+\resumePubHeading{Journal Article(s)}
+\resumeItemListStart
+\resumeItem{Ruoyu Xu, \textbf{Zixing Jiang}, Beibei Liu, Yuquan Wang and Huihuan Qian*, ``\textit{Confidence-aware Object Capture for a Manipulator Subject to Floating-base Disturbances}”, Submitted to IEEE Transactions on Robotics \textbf{(T-RO)}, 2023 (under review).}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumePubHeading{Conference Papers}
+\resumeItemListStart
+\resumeItem{Yiyang Jiang, Ruoyu Xu, \textbf{Zixing Jiang}, and Huihuan Qian*, ``\textit{Design, Modeling and Control of A Novel USV-Manipulator System}'', 2023 IEEE International Conference on Real-time Computing and Robotics \textbf{(RCAR 2023)}, pp. 206--211, IEEE, 2023. \href{https://ieeexplore.ieee.org/document/10249802}{\textcolor{blue}{[Link]}}} 
+\resumeItem{Chongfeng Liu, \textbf{Zixing Jiang}, Ruoyu Xu, Xiaoqiang Ji, Lianxin Zhang, and Huihuan Qian*, ``\textit{Design and Optimization of a Magnetic Catch System for Precise UAV Landing on Disturbed Aquatic Surface Platform}'', 2022 IEEE International Conference on Robotics and Automation \textbf{(ICRA 2022)}, pp. 1162--1168, IEEE, 2022. \href{https://ieeexplore.ieee.org/document/9812270}{\textcolor{blue}{[Link]}}}
+\resumeItemListEnd 
+\vspace{-13pt}
+\resumePubHeading{Patents}
+\resumeItemListStart
+\resumeItem{Chongfeng Liu, Zhongzhong Cao, \textbf{Zixing Jiang}, Rouyu Xu, Xiaoqiang Ji, and Huihuan Qian, ``\textit{Landing System, Landing Method and Storage Medium for Unmanned Aerial Vehicle}'', Chinese patent CN115167522A (substantial examination). \href{https://www.patentguru.com/search?q=CN115167522A}{\textcolor{blue}{[Link]}}}
+\resumeItem{\textbf{Zixing Jiang}, Xiaoqiang Ji, Chongfeng Liu, and Huihuan Qian, ``\textit{A Quadcopter Flapping-wing Micro Aerial Vehicle and its Flight Method}'', Chinese patent CN114889821A. \href{https://www.patentguru.com/search?q=CN114889821A}{\textcolor{blue}{[Link]}}}
+\resumeItem{Xiaoqiang Ji, Zefang Song, \textbf{Zixing Jiang}, and Huihuan Qian, ``\textit{A Flapping-wing Configuration and Flapping-wing Micro Aerial Vehicle on Water Surface}'', Chinese patent CN217320745U. \href{https://www.patentguru.com/search?q=CN217320745U}{\textcolor{blue}{[Link]}}}
+\resumeItem{Zefang Song, Xiaoqiang Ji, \textbf{Zixing Jiang}, and Huihuan Qian, ``\textit{A Dual Crank-based Flapping-wing Configuration and Flapping-Wing Micro Aerial Vehicle on Water Surface}'', Chinese patent CN217320744U. \href{https://www.patentguru.com/search?q=CN217320744U}{\textcolor{blue}{[Link]}}}
+\resumeItemListEnd 
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{\faProjectDiagram\ Selected Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{Robot-assisted Autonomous Ultrasound for Thyroid and Breast}{Mar. 2023 -- Oct. 2023}{Participated research at RAIL, CUHK-Shenzhen, supervised by Prof. Zhenglong Sun}{\href{https://www.zixingjiang.com/projects/robotic-ultrasound/}{\textcolor{blue}{[Link]}}}
+\resumeItemListStart
+\resumeItem{Programmed on the UR5e platform to implement some functionality for robot-assisted automatic ultrasound, including admittance control, automatic surface normal alignment, teleoperation, and visual servoing.}
+\resumeItem{Applied V4L2 protocol for real-time ultrasound image acquisition and trained a U-Net for image segmentation.}
+\resumeItem{Tested programs on thyroid and breast phantoms.}
+\resumeItemListEnd
+\resumeProjectHeading{Manipulator-assisted UAV Landing on Water Surface}{Sept. 2020 -- Feb. 2023}{Participated research at RAIL, CUHK-Shenzhen, supervised by Prof. Huihuan Qian}{\href{https://www.zixingjiang.com/projects/uav-landing/}{\textcolor{blue}{[Link-1]}} \href{https://www.zixingjiang.com/projects/confidence-aware/}{\textcolor{blue}{[Link-2]}}}
+\resumeItemListStart
+\resumeItem{Worked in a team to study the feasibility of Manipulator-assisted UAV landing on a unmanned surface vehicle (USV) platform. Assisted in hardware design, microprocessor programming, and conducting indoor and outdoor experiments.}
+\resumeItem{Co-proposed with a PhD student a tethered landing method to reduce the difficulty of landing UAVs precisely on disturbed surface platforms in turbulent water. Fabricated a magnetic catch system to implement the proposed landing method. This work was summarized as a conference paper presented on IEEE ICRA 2022. The system was later deployed as the manipulator's end effector for the UAV landing assistance task. (See Link-1)}
+\resumeItem{Co-proposed with a PhD student a motion planning algorithm based on wavelet network prediction, real-time confidence analysis, and optimal control to enable the manipulator to catch hovering UAVs on a disturbed water surface platform. Verified feasibility and reliability of the algorithm on Simscape Multibody simulation and real robot. This work was summarized as a journal article submitted to IEEE T-RO. (See Link-2)}
+\resumeItemListEnd 
+\resumeProjectHeading{Object Grasping for Manipulator on Water Surface}{Fall semester 2022}{Undergraduate FYP}{ \href{https://www.zixingjiang.com/projects/floating-manipulator/}{\textcolor{blue}{[Link]}}}
+\resumeItemListStart
+\resumeItem{Proposed a predictive control framework that makes manipulators capable of grasping objects on disturbed platforms. The control framework consists of minimum-volume enclosing ellipsoid fitting, wavelet regression based motion prediction, cubic polynomial trajectory generation and Levenberg-Marquardt inverse kinematics.}
+\resumeItem{Implemented the proposed control framework with MATLAB and verified its feasibility in Simscape Multibody simulation environment.}
+\resumeItem{Completed with Distinction, School of Science and Engineering 2019 cohort, CUHK-Shenzhen.}
+\resumeItemListEnd 
+\resumeProjectHeading{5-DoF Manipulator Assembly, Modeling, and Control}{Fall semester 2022}{Group course project (2 people), CIE6107 Robotics and Intelligent Systems, CUHK-Shenzhen}{\href{https://www.zixingjiang.com/projects/cie6107/}{\textcolor{blue}{[Link]}}}
+\resumeItemListStart
+\resumeItem{Assembled a 5-degree-of-freedom serial manipulator from parts (servo motors, metal frames, electronics).}
+\resumeItem{Derived forward and inverse kinematics for the manipulator with the Denavit-Hartenberg convention. Adopted the derived kinematics into MATLAB programs. Tested the derived kinematics on a simulated manipulator provided by the MATLAB Robotics System Toolbox and the real manipulator.}
+\resumeItem{Developed a remote control program for keyboards and joysticks for the manipulator with Bluetooth communication and MATLAB-Arduino communication.}
+\resumeItem{Achieved several functional demos including Cartesian movement of the end-effector, pick-and-throw, and vision-guided teleoperation. }
+\resumeItemListEnd 
+\resumeProjectHeading{Bio-inspired Aquatic-Aerial Amphibious Robot}{Nov. 2021 -- Oct. 2022}{Individual student project supported by Undergraduate Research Award (URA), CUHK-Shenzhen }{\href{https://ieeexplore.ieee.org/document/10249802}{\textcolor{blue}{[Link]}}}
+\resumeItemListStart
+\resumeItem{Inspired by the kingfisher and the flying fish, built a flapping-wing driven robot prototype that can perform aquatic-aerial amphibious locomotion.}
+\resumeItem{Investigated the relationship between whether the ornithopter can take off from the ground and the angle-of-attack of its initial wing pose through flight tests.}
+\resumeItem{Some achievements of the project were granted Chinese patents.}
+\resumeItemListEnd 
+\resumeProjectHeading{Object Sorting with Eye-in-hand Manipulator}{Spring semester 2022}{Individual course project, ECE4310 Programming for Robotics, CUHK-Shenzhen}{ \href{https://www.zixingjiang.com/projects/ece4310-sorting/}{\textcolor{blue}{[Link]}}}
+\resumeItemListStart
+\resumeItem{Programmed a 6-degree-of-freedom manipulator with eye-in-hand camera configuration with Robot Operating System (ROS) to perform an intelligent sorting task: automatically places the different colored pieces into the corresponding colored trash bins.}
+\resumeItem{Used the MoveIt motion planning stack for robot kinematics. Applied linear regression for robot fixed-pose hand-eye calibration. Implemented color-based object recognition program with the OpenCV and HSV masks.}
+\resumeItemListEnd 
+\resumeProjectHeading{Navigation of Service Robot}{Spring semester 2022}{Individual course project, ECE4310 Programming for Robotics, CUHK-Shenzhen}{ \href{https://www.zixingjiang.com/projects/ece4310-navigation/}{\textcolor{blue}{[Link]}}}
+\resumeItemListStart
+\resumeItem{Programmed a service robot to perform an auto-delivery task in Gazebo simulation environment: traverse all delivery sites; each site is distinguished with an Artificial Reality (AR) tag, which indicates the position of the following site relative to the current site.}
+\resumeItem{Applied ROS move\_base package for robot path planning. Used LiDAR to construct local map for obstacle avoidance. Applied ROS ar\_track\_alvar package for AR tag recognition.}
+\resumeItemListEnd 
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------INVOLVEMENT---------------
+\section{\faHandshake\ Leadership/Extracurricular}
+\resumeSubHeadingListStart
+\resumeSubheading{Student Robotics Association (SRA), RAIL}{Sept. 2020 -- Feb. 2022}{Student Chair}{CUHK-Shenzhen}
+\resumeItemListStart
+\resumeItem{Served as the second student leader of RAIL-affiliated SRA held by Prof. Huihuan Qian, aiming to encourage undergraduates at the CUHK-Shenzhen to participate in robotics research and provide them with basic training before joining the laboratory.}
+\resumeItem{Led a group of senior SRA members in conducting RAIL briefings and provide weekly robotics tutorials to junior SRA members. Our tutorials covered PID control, microcontroller programming, robot programming, and hands-on projects such as building unmanned sailboats and unmanned McNamee wheeled vehicles.}
+\resumeItem{Recruited more than 30 new members and helped more than half of them participate in robotics research at RAIL and decide to pursue a robotics-related career.}
+\resumeItemListEnd
+
+\resumeSubheading{2021 RoboMaster University AI Challenge (RMUA)}{Sept. 2020 -- May 2021}{Head of Robot Perception Group of CUHK-Shenzhen RMUA Team}{CUHK-Shenzhen}
+\resumeItemListStart
+\resumeItem{Led a three-member group to develop a robot visual tracking system based on You Only Look Once (YOLO) and Kernelized Correlation Filters (KCF) algorithms. Achieved about 80\% tracking accuracy.}
+\resumeItem{Coordinated two other groups of the university RMUA team (Robot Control Group and Robot Decision Making Group) to jointly develop a ROS-based program for the RMUA challenge.}
+\resumeItemListEnd
+\resumeSubheading{2020 RoboCom Spark ROS Robotics Competition}{Aug. 2020 -- Oct. 2020}{Technical Head of one of CUHK-Shenzhen RoboCom Teams}{CUHK-Shenzhen}
+\resumeItemListStart
+\resumeItem{Took charge of robot hardware debugging and robot programming.}
+\resumeItem{Led the five-member team to develop a ROS-based program for the RoboCom competition.}
+\resumeItem{Led the team to win 2$^{\text{nd}}$ class award of the team in semi-autonomous competition and 3$^{\text{rd}}$ class award of the team in autonomous competition, Guangdong Division.}
+\resumeItemListEnd
+      
+\resumeSubHeadingListEnd
+
+%-----------INVOLVEMENT---------------
+\section{\faHeart\ Services}
+\vspace{-6pt}
+\resumeSubHeadingListStart
+\resumePubHeading{Academic Peer Review}
+\resumeItemListStart
+\resumeItem{2023 IEEE International Conference on Robotics and Biomimetics \textbf{(ROBIO 2023)}.}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumePubHeading{Student Mentorship}
+\resumeItemListStart
+\resumeItem{Co-mentor of Yiyang Jiang's URA project ``Design, Modeling and Control of A Novel USV-Manipulator System" (published on IEEE RCAR 2023), CUHK-Shenzhen, Fall semester 2022.}
+\resumeItemListEnd   
+\vspace{-13pt}
+\resumePubHeading{Social Care}
+\resumeItemListStart
+\resumeItem{Hair donor of Qingsi Xingdong, a non-profit organization founded by Chinese university students  that accepts donated hair, makes wigs, and distributes them free of charge to cancer patients undergoing chemotherapy.}
+\resumeItemListEnd   
+\resumeSubHeadingListEnd
+    
+%-----------INVOLVEMENT---------------
+\section{\faTrophy \ Honors/Awards}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     School of Science and Engineering 2022-23 {Dean's List Award}, CUHK-Shenzhen. \hfill  2023 \\
+     First Class Honors, {Bachelor's Degree Classification}, CUHK-Shenzhen. \hfill 2023\\
+     {Final Year Project Distinction}, CUHK-Shenzhen. \hfill 2023 \\
+     17$^{\text{th}}$--19$^{\text{th}}$ Round {Undergraduate Research Award}, CUHK-Shenzhen. \hfill 2021--22 \\
+     2$^{\text{nd}}$ Class Award of the team in Semi-autonomous Competition, Guangdong Division, {RoboCom 2020}. \hfill 2020\\
+     3$^{\text{rd}}$ Class Award of the team in Autonomous Competition, Guangdong Division, {RoboCom 2020}. \hfill 2020\\
+    }}
+ \end{itemize}
+ 
+\vspace{-16pt}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{\faCogs\ Skills}
+\begin{itemize}[leftmargin=0in, label={}]
+     \small{\item{
+      \textbf{Languages}{ (* indicates native): Chinese* (Mandarin, \href{https://en.wikipedia.org/wiki/Wu_Chinese}{\textcolor{blue}{Wu}}, \href{https://en.wikipedia.org/wiki/Xiang_Chinese}{\textcolor{blue}{Xiang}}), English.} \\
+      \textbf{Coding}{ (* indicates frequently used): Python*, C/C++*, MATLAB*, Bash*, Verilog,  VHDL, SQL, Java. } \\
+      \textbf{Robotics Developer Tools}{: ROS, Gazebo, SolidWorks, MuJoCo,  \href{https://drake.mit.edu/}{\textcolor{blue}{Drake}}, MoveIt, Openrave.} \\
+      \textbf{Platform/Hardware}{: Linux, UR5/UR5e, ROKAE xMate ER, InterbotiX, Arduino, STM32, Raspberry Pi, FPGA.} \\
+      \textbf{Miscellaneous}{: \LaTeX, Jeklly, HTML, Markdown, \href{https://www.manim.community/}{\textcolor{blue}{Manim}}, popular office software (Microsoft, Adobe, etc).} \\
+     }}
+\end{itemize}
+ 
+\begin{center}
+	\vfill
+    Updated \monthyeardate\today
+\end{center}
+\end{document}
