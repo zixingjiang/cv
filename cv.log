@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.2)  22 OCT 2023 10:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.2)  9 NOV 2023 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,24 +490,24 @@ LaTeX Info: Redefining \today on input line 736.
 (./cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count324
@@ -522,7 +522,7 @@ LaTeX Font Info:    ... okay on input line 134.
 \makeMPintoPDFobject=\count329
 \everyMPtoPDFconversion=\toks34
 )
-Package hyperref Info: Link coloring OFF on input line 134.
+Package hyperref Info: Link coloring OFF on input line 135.
  (c:/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -534,9 +534,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 134.
-LaTeX Info: Redefining \pageref on input line 134.
-LaTeX Info: Redefining \nameref on input line 134.
+LaTeX Info: Redefining \ref on input line 135.
+LaTeX Info: Redefining \pageref on input line 135.
+LaTeX Info: Redefining \nameref on input line 135.
 
 (./cv.out) (./cv.out)
 \@outlinefile=\write3
@@ -544,164 +544,120 @@ LaTeX Info: Redefining \nameref on input line 134.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 134.
+(lastpage)             ! on input line 135.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 147.
+nput line 151.
 
 (c:/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 147.
+nput line 151.
 
 (c:/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 14
-7.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 15
+1.
 
 (c:/texlive/2022/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
-nput line 148.
+nput line 152.
 
 (c:/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree3.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 149.
+ input line 153.
 
 (c:/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10> not 
 available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 149.
+n input line 153.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 154.
+(Font)              using `OT1/cmr/bx/n' instead on input line 159.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faSearch' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faGraduationCap' on input line 163.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faUsers' on input line 208.
-
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on i
-nput line 226.
-(c:/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd)
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faBook' on input line 226.
-
-
-Overfull \hbox (0.54277pt too wide) in paragraph at lines 231--233
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 241--243
 []  
  []
 
 
-Overfull \hbox (0.54277pt too wide) in paragraph at lines 236--238
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 246--248
 []  
  []
 
 
-Overfull \hbox (0.54277pt too wide) in paragraph at lines 242--244
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 252--254
 []  
  []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faProjectDiagram' on input line 253.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\footskip}{13.59999pt}.
+(fancyhdr)                Make it at least 12.48pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.48pt}.
 
 [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (3.0108pt too wide) in alignment at lines 281--281
-[] [] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faHandshake' on input line 301.
-
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\footskip}{13.59999pt}.
+(fancyhdr)                Make it at least 12.48pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.48pt}.
 
 [2]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faHeart' on input line 325.
-
-
-Overfull \hbox (0.54277pt too wide) in paragraph at lines 328--330
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 341--343
 []  
  []
 
 
-Overfull \hbox (0.54277pt too wide) in paragraph at lines 333--335
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 346--348
 []  
  []
 
 
-Overfull \hbox (0.54277pt too wide) in paragraph at lines 338--340
+Overfull \hbox (0.55968pt too wide) in paragraph at lines 351--353
 []  
  []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faTrophy' on input line 345.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faCogs' on input line 360.
 
 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\footskip}{13.59999pt}.
+(fancyhdr)                Make it at least 12.48pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.48pt}.
 
 [3] (./cv.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: 775982F4E9E118ADD08CCDBF2EAE3C82;1060.
+(rerunfilecheck)             Checksum: 1A003F2D99FC3105BEBFBDA614FA940C;988.
  ) 
 Here is how much of TeX's memory you used:
- 15586 strings out of 478268
- 265381 string characters out of 5850346
- 600309 words of memory out of 5000000
- 33568 multiletter control sequences out of 15000+600000
- 479010 words of font info for 65 fonts, out of 8000000 for 9000
+ 15566 strings out of 478268
+ 264816 string characters out of 5850346
+ 598331 words of memory out of 5000000
+ 33552 multiletter control sequences out of 15000+600000
+ 477801 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,11n,76p,1045b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc}{c:/tex
-live/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{c:/texlive/20
-22/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}{c:/texlive/2022/texmf-
-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{c:/texlive/2022/texmf-dist/font
-s/enc/dvips/fontawesome5/fa5free2.enc}<c:/texlive/2022/texmf-dist/fonts/type1/p
-ublic/fontawesome5/FontAwesome5Brands-Regular.pfb><c:/texlive/2022/texmf-dist/f
-onts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><c:/texlive/2022/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
-><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on cv.pdf (3 pages, 171691 bytes).
+ 70i,11n,76p,1045b,597s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{c:/t
+exlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}{c:/texlive/20
+22/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{c:/texlive/2022/texmf-
+dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}<c:/texlive/2022/texmf-dist/font
+s/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><c:/texlive/2022/tex
+mf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><c:/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2022/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2022/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+>
+Output written on cv.pdf (3 pages, 168229 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 144 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  13 named destinations out of 1000 (max. 500000)
  73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
