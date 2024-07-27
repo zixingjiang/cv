@@ -2,6 +2,5 @@
 
 You can preview the CV as a [PDF](cv.pdf). 
 
-The template is based on [Jake's Resume (Anonymous)](https://www.overleaf.com/latex/templates/jakes-resume-anonymous/cstpnrbkhndn), with minor modifications. 
-
+The template is based on [Geoff Boeing's CV](https://github.com/gboeing/cv), with minor modifications. 
 
