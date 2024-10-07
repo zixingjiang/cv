@@ -1,0 +1,255 @@
+%!TeX program = pdflatex
+% Zixing Jiang's Curriculum Vitae
+% Email: zxjiang@surgery.cuhk.edu.hk
+% Web: https://zixingjiang.com/
+% Repo: https://github.com/zixingjiang/cv
+
+\documentclass[11pt,letterpaper]{report}
+
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
+\usepackage{microtype}% improve text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto}    % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+\usepackage{setspace} % custom line spacing
+\usepackage[dvipsnames]{xcolor}
+\usepackage[fixed]{fontawesome5}
+
+% what is your name?
+\newcommand{\myname}{JIANG Zixing}
+
+% select default typefaces
+\usepackage{crimson} % document's serif font
+\usepackage{helvet}  % document's sans serif font
+
+%\usepackage{ebgaramond} % document's serif typeface
+%\usepackage{tgheros}    % document's sans serif typeface
+
+% how far to tab for list items with left-aligned date: different fonts need different widths
+\newcommand{\listtabwidth}{1.7cm}
+
+% define font to use as document's title
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{24pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+
+% set page margins (assumes letter paper)
+\geometry{body={6.5in, 9.0in},
+	left=1.0in,
+	top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% set line spacing
+\setstretch{0.9}
+
+% define space between list items
+\newcommand{\listitemspace}{0.25em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+			\setlength{\parskip}{0em}
+			\setlength{\itemsep}{\listitemspace}
+			\setlength{\parsep}{\listitemspace}}}
+	{\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+	labelindent=0em,
+	topsep=0em,
+	partopsep=0em,
+	itemsep=\listitemspace,
+	parsep=\listitemspace,
+	font=\normalfont}
+
+% print only the month and year when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+	colorlinks  = true,
+	urlcolor    = Blue,
+	citecolor   = blue,
+	linkcolor   = red,
+	pdfauthor   = {\myname},
+	pdftitle    = {\myname: Curriculum Vitae},
+	pdfsubject  = {Curriculum Vitae},
+	pdfpagemode = UseNone
+}
+
+
+\usepackage[multiple, hang, flushmargin]{footmisc}
+\usepackage{fnpct}
+\addtolength{\skip\footins}{1.5pc plus 5pt}
+\renewcommand\thefootnote{\textcolor{red}{\arabic{footnote}}}
+
+\begin{document}
+\raggedright{}
+	
+% display your name as the document title
+\namefont{\myname}
+	
+% affiliation and contact info blocks
+\vspace{1em}
+\begin{minipage}[t]{0.700\textwidth}
+	% current primary affiliation, left-aligned
+	M.Phil. Student, Department of Surgery\\
+	Faculty of Medicine, The Chinese University of Hong Kong\\
+	Sha Tin, N.T., Hong Kong, China
+\end{minipage}
+\begin{minipage}[t]{0.295\textwidth}
+	% contact info details, right-aligned
+	\flushright{}
+	\href{mailto:zxjiang@surgery.cuhk.edu.hk}{zxjiang@surgery.cuhk.edu.hk} \\
+	+852 5954 9660 \\
+	\href{https://zixingjiang.com}{https://zixingjiang.com}
+\end{minipage}
+	
+\section*{Education}
+\begin{tablist}
+	\item[M.Phil.]  \tab{}Surgery, The Chinese University of Hong Kong (CUHK), China, In progress 2024--\\
+	\item[B.Eng.]  \tab{}Electronic Information Engineering \textit{First-Class Honors}, CUHK-Shenzhen, China, 2023\\
+\end{tablist}
+	
+
+\section*{Experience}
+	
+\begin{tablist}
+	\item[2023--24]   \tab{}CUHK Department of Surgery \hfill \textit{Hong Kong, China}\\
+	Research Assistant, Advanced Bio-Medical Robotics Lab \hfill \textit{2023.11--2024.07}
+		
+	\item[2020--23]   \tab{}CUHK-Shenzhen Robotics \& AI Lab (RAIL) \hfill \textit{Shenzhen, China}\\
+	Student Research Intern, SUN Lab (surgical robots and medical devices) \hfill \textit{2023.02--2023.08}\\
+	Student Research Intern, Advanced Marine Robotics Group \hfill \textit{2020.09--2023.02}
+\end{tablist}
+	
+\section*{Research Interests}
+\begin{itemize}
+	\item Robotics / Medical Robotics / Surgical Robotics
+	\item Robot-Assisted Imaging
+	\item Image-Guided Robotic Interventions
+\end{itemize}
+	
+\section*{Selected Projects}
+\begin{tablist}
+	\item[2023--24] \tab Autonomous Robotic Lung Ultrasound --- \textit{Research project I participated in at CUHK, supervised by \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{Prof. LI Zheng} and \href{https://www.cse.cuhk.edu.hk/people/faculty/pheng-ann-heng/}{Prof. Pheng-Ann Heng}. This project aimed to use robots to perform autonomous point-of-care lung ultrasound examinations in ICUs to prevent clinicians from infection during pandemics. I contributed to this project as the robot development lead, prototyped an robotic lung ultrasound system (software + hardware) and assisted in its preclinical validation. A video demo of this project is available at \href{https://www.zixingjiang.com/projects/robotic-lus/}{zixingjiang.com/projects/robotic-lus/}.}
+	
+	\item[2020--23] \tab Manipulator-Assisted UAV Landing on Disturbed Aquatic Platforms ---
+	 \textit{Research project I participated in at CUHK-Shenzhen, supervised by \href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{Prof. QIAN Huihuan}. This project aimed to use a manipulators to assist the landing of unmanned aerial vehicles (UAVs) on aquatic platforms subject to wave disturbances. I contributed to this project by assisting Ph.D. students in the development and validation of the manipulators' end-effectors and motion planning algorithms for the landing assistance task. For more information, please see \href{https://www.zixingjiang.com/projects\#marine-robotics}{zixingjiang.com/projects\#marine-robotics}.}
+\end{tablist}
+	
+\section*{Publications}
+\subsection*{Journal Article\footnote{\label{authorship}Notations: $^*$ co-first authors, $^\dagger$ corresponding authors}}
+\begin{tablist}
+	\item[2024]  \tab{}R. Xu, \textbf{Z. Jiang}, B. Liu, Y. Wang, and H. Qian$^\dagger$, ``Confidence-Aware Object Capture for a Manipulator Subject to Floating-Base Disturbances,'' in \textit{IEEE Transactions on Robotics (T-RO)}, Early Access,  doi: \href{https://doi.org/10.1109/TRO.2024.3463476}{10.1109/TRO.2024.3463476}.
+\end{tablist}
+	
+\subsection*{Conference Proceedings\footref{authorship}\footnote{\label{pre-author}Conference presenting author \textit{italicized} if other than the first author}}
+\begin{tablist}
+	\item[2023]   \tab{}Y. Jiang, R. Xu, \textbf{Z. Jiang} and H. Qian$^\dagger$, ``Design, Modeling and Control of A Novel USV-Manipulator System,'' \textit{2023 IEEE International Conference on Real-time Computing and Robotics (RCAR)}, Datong, China, 2023, pp. 206-211, doi: \href{https://doi.org/10.1109/RCAR58764.2023.10249802}{ 10.1109/RCAR58764.2023.10249802}.
+		
+	\item[2022]   \tab{}C. Liu, \textbf{Z. Jiang}, R. Xu, X. Ji, L. Zhang and H. Qian$^\dagger$, ``Design and Optimization of a Magnetic Catcher for UAV Landing on Disturbed Aquatic Surface Platforms,'' \textit{2022 International Conference on Robotics and Automation (ICRA)}, Philadelphia, PA, USA, 2022, pp. 1162-1168, doi: \href{https://doi.org/10.1109/ICRA46639.2022.9812270}{ 10.1109/ICRA46639.2022.9812270}.
+\end{tablist}
+	
+\subsection*{Patents}
+\begin{tablist}		
+	\item[2023]   \tab{}\textbf{Z. Jiang}, X. Ji, C. Liu, and H. Qian,``Four-wing flapping wing micro water surface aircraft and flight method,'' Chinese patent \href{https://patents.google.com/patent/CN114889821B/en?oq=CN114889821B}{CN114889821B}, granted February 24, 2023.
+		
+	\item[2022]   \tab{}X. Ji, Z. Song, \textbf{Z. Jiang}, and H. Qian, ``Flapping wing mechanism and miniature water surface flapping wing aircraft,'' Chinese patent \href{https://patents.google.com/patent/CN217320745U/en?oq=CN217320745U}{CN217320745U}, granted August 30, 2022.  
+		
+	\item[2022]   \tab{}X. Ji, Z. Song, \textbf{Z. Jiang}, and H. Qian, ``Flapping wing mechanism based on double cranks and micro water surface flapping wing aircraft,'' Chinese patent \href{https://patents.google.com/patent/CN217320744U/en?oq=CN217320744U}{CN217320744U}, granted August 30, 2022.  
+		
+	\item[2022]   \tab{}C. Liu, Z. Cao, \textbf{Z. Jiang}, R. Xu, X. Ji, and H. Qian, ``Landing system, landing method and storage medium for unmanned aerial vehicle,'' Chinese patent \href{https://patents.google.com/patent/CN115167522A/en?oq=CN115167522A}{CN115167522A}, published October 11, 2022, patent pending.
+\end{tablist}
+	
+	
+	
+\section*{Conference Activity}
+\subsection*{Workshop Abstract Presented\footref{authorship}\footref{pre-author}}
+\begin{tablist}
+	\item[2024] \tab \textbf{Z. Jiang}, Y. Hu, X. Luo, J. Miao, Y. Zhang, L. Lei, S. Wang, P.-A. Heng, Z. Li$^\dagger$, ``A Collaborative Robotic System with In-Plane Orientation Adjustment for Lung Ultrasonograph'', presented at workshop \textit{Autonomy in Robotic Surgery: State of the art, technical and regulatory challenges for clinical application}, 2024 IEEE International Conference on Robotics and Automation (ICRA), Yokohama, Japan, May 13, 2024. --- \textit{Abstract, poster, video demos available at \href{https://www.zixingjiang.com/icra2024/}{zixingjiang.com/icra2024/}.}
+\end{tablist}
+	
+\section*{Service}
+\subsection*{Academic Conference Reviewer}
+\begin{itemize}
+	\item \textit{The IEEE International Conference on Robotics and Automation (ICRA)}, 2025
+	\item \textit{The IEEE International Conference on Robotics and Biomimetics (ROBIO)}, 2023 
+\end{itemize}
+	
+	
+\section*{Leadership}
+\begin{tablist}
+	\item[2020--22]   \tab President of RAIL Student Robotics Association, CUHK-Shenzhen --- \textit{Responsibilities: recruiting members, coordinating events, providing weekly robotics tutorials.}
+\end{tablist}
+	
+\section*{Awards}
+\begin{tablist}
+	\item[2023]   \tab School of Science and Engineering Academic Year 2022--23 Dean's List Award, CUHK-Shenzhen
+	\item[2021--22]   \tab The 17--19th rounds of  Undergraduate Research Award, CUHK-Shenzhen
+\end{tablist}
+	
+\section*{Technical Skills}
+\begin{tablist}
+	\item[Coding] \tab Python, C++, C, MATLAB
+	\item[Robotics] \tab Full-stack skills with a particular emphasis on motion planning and control
+	\item [Img Proc] \tab Spatial-temporal filtering, segmentation, registration
+	\item[Software] \tab Robotics development: ROS, MoveIt, Gazebo, CoppeliaSim\\
+	Computing / Data analysis / Machine Learning: Eigen, NumPy, pandas, PyTorch, scikit-learn\\
+	2D \& 3D vision: OpenCV, Open3D, 3D Slicer\\
+	CAD: SolidWorks\\
+	Miscellaneous: Docker, DaVinci Resolve, \LaTeX
+	\item[Hardware] \tab Developing platforms: Linux, Arduino, Raspberry Pi, STM32, ESP32	, FPGA\\
+	Robots: manipulator, ornithopter, UAV, USV, UGV\\ 
+	Sensors: RGB-D camera, force/torque sensor, optical tracker\\
+	Interfaces: haptic devices, joysticks\\
+	Clinical ultrasound: Wisonic Medical, BK Medical
+\end{tablist}
+
+
+\section*{Languages}
+\begin{tablist}
+	\item[Chinese] \tab Mandarin -- Native
+	\item[English] \tab Professional proficiency
+\end{tablist}
+\newpage
+\section*{References}
+\begin{itemize}
+	\item \textbf{Prof. LI Zheng} ~{\scriptsize \faEnvelope}\href{mailto:zhengli@cuhk.edu.hk}{zhengli@cuhk.edu.hk}\\
+	Associate Professor\\
+	Department of Surgery\\
+	The Chinese University of Hong Kong\\
+	\vspace{3pt}
+	\textbf{Relationship:} M.Phil. supervisor; Research supervisor
+
+	\vspace{10pt}
+	\item \textbf{Prof. QIAN Huihuan (Alex)} ~{\scriptsize \faEnvelope}\href{mailto:hhqian@cuhk.edu.cn}{hhqian@cuhk.edu.cn}\\
+	Associate Professor\\School of Science and Engineering\\The Chinese University of Hong Kong, Shenzhen\\
+	\vspace{3pt}
+	\textbf{Relationship:} Undergraduate final year project supervisor; Research supervisor
+
+\end{itemize}
+	
+% display today's date as Month Year after a vertical space below the end of the text
+\begin{center}
+	\vfill
+	Updated \monthyeardate\today. Check the latest version at:  \href{https://www.zixingjiang.com/cv/}{zixingjiang.com/cv/}
+\end{center}
+	
+\end{document}
