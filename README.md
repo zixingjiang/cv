@@ -1,5 +1,5 @@
 # Academic CV
-This repo contains [Zixing Jiang](https://www.zixingjiang.com/)'s **LaTeX academic CV**, you can preview the CV as a [PDF](https://www.zixingjiang.com/files/cv-zxjiang.pdf). 
+This repo contains [Zixing Jiang](https://www.zixingjiang.com/)'s **LaTeX academic CV**, you can preview the CV as a [PDF](https://www.zixingjiang.com/files/pdf/cv-zxjiang.pdf). 
 
 **Credit:** This CV is adapted from [Geoff Boeing's CV](https://github.com/gboeing/cv).
 
