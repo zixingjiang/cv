@@ -19,6 +19,9 @@
 \usepackage{titlesec} % allow custom section fonts
 \usepackage[dvipsnames]{xcolor}
 \usepackage[fixed]{fontawesome5}
+\usepackage{textcase}
+
+
 
 % what is your name?
 \newcommand{\myname}{JIANG Zixing}
@@ -38,17 +41,17 @@
 
 % set section heading fonts and before/after spacing
 \SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
-\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
-\titlespacing{\section}{0pt}{24pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\MakeUppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{20pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
 
 % set subsection heading fonts and before/after spacing
 \titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
-\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+\titlespacing{\subsection}{0pt}{4pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
 
 % set page margins (assumes letter paper)
 \geometry{body={6.5in, 9.0in},
 	left=1.0in,
-	top=1.0in}
+	top=0.8in}
 
 % prevent paragraph indentation
 \setlength\parindent{0em}
@@ -94,13 +97,33 @@
 }
 
 
-\usepackage[multiple, hang, flushmargin]{footmisc}
+\usepackage[multiple, hang, flushmargin, stable]{footmisc}
 \usepackage{fnpct}
 \addtolength{\skip\footins}{1.5pc plus 5pt}
 \renewcommand\thefootnote{\textcolor{red}{\arabic{footnote}}}
 
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% Custom footer for the first page
+\fancypagestyle{firstpagefooter}{
+	\fancyhf{}
+	\fancyfoot[R]{\monthyeardate\today}
+	\fancyfoot[C]{\thepage ~of \pageref{LastPage}}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+}
+
+% Custom footer for the rest of the pages
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage ~of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+
 \begin{document}
-\raggedright{}
+	\thispagestyle{firstpagefooter}
+	\raggedright{}
 	
 % display your name as the document title
 \namefont{\myname}
@@ -113,12 +136,13 @@
 	Faculty of Medicine, The Chinese University of Hong Kong\\
 	Sha Tin, N.T., Hong Kong, China
 \end{minipage}
+\hfil
 \begin{minipage}[t]{0.295\textwidth}
 	% contact info details, right-aligned
 	\flushright{}
 	\href{mailto:zxjiang@surgery.cuhk.edu.hk}{zxjiang@surgery.cuhk.edu.hk} \\
 	+852 5954 9660 \\
-	\href{https://zixingjiang.com}{https://zixingjiang.com}
+	\href{https://zixingjiang.com}{https://zixingjiang.com}\\
 \end{minipage}
 	
 \section*{Education}
@@ -142,25 +166,25 @@
 \section*{Research Interests}
 \begin{itemize}
 	\item Robotics / Medical Robotics / Surgical Robotics
-	\item Robot-Assisted Imaging
 	\item Image-Guided Robotic Interventions
+	\item Robot-Assisted Imaging
 \end{itemize}
 	
 \section*{Selected Projects}
 \begin{tablist}
-	\item[2023--24] \tab Autonomous Robotic Lung Ultrasound --- \textit{Research project I participated in at CUHK, supervised by \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{Prof. LI Zheng} and \href{https://www.cse.cuhk.edu.hk/people/faculty/pheng-ann-heng/}{Prof. Pheng-Ann Heng}. This project aimed to use robots to perform autonomous point-of-care lung ultrasound examinations in ICUs to prevent clinicians from infection during pandemics. I contributed to this project as the robot development lead, prototyped a robotic lung ultrasound system (software + hardware) and assisted in its preclinical validation. A video demo of this project is available at \href{https://www.zixingjiang.com/projects/robotic-lus/}{zixingjiang.com/projects/robotic-lus/}.}
+	\item[2023--24] \tab Autonomous Robotic Lung Ultrasound --- \emph{Research project I participated in at CUHK, supervised by \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{Prof. LI Zheng} and \href{https://www.cse.cuhk.edu.hk/people/faculty/pheng-ann-heng/}{Prof. Pheng-Ann Heng}. This project aimed to use robots to perform autonomous point-of-care lung ultrasound examinations in intensive care units (ICUs) to reduce the risk of infection for clinicians during epidemics. I contributed to this project as the robot development lead, prototyped a robotic lung ultrasound system and assisted in its preclinical validation. A video demonstration of the prototype in action is available on \href{https://www.zixingjiang.com/projects/robotic-lus/}{my homepage}\footnote{ \href{https://zixingjiang.com/projects/robotic-lus/}{https://zixingjiang.com/projects/robotic-lus/}}.}
 	
-	\item[2020--23] \tab Manipulator-Assisted UAV Landing on Disturbed Aquatic Platforms ---
-	 \textit{Research project I participated in at CUHK-Shenzhen, supervised by \href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{Prof. QIAN Huihuan}. This project aimed to use manipulators to assist the landing of unmanned aerial vehicles (UAVs) on aquatic platforms subject to wave disturbances. I contributed to this project by assisting Ph.D. students in the development and validation of manipulators' end-effectors and motion planning algorithms for the landing assistance task. For more information, please see \href{https://www.zixingjiang.com/projects/\#marine-robotics}{zixingjiang.com/projects/\#marine-robotics}.}
+	\item[2020--23] \tab Manipulator-Assisted UAV Landing on Wave-Disturbed Aquatic Platform ---
+	 \textit{Research project I participated in at CUHK-Shenzhen, supervised by \href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{Prof. QIAN Huihuan}. This project aimed to use a manipulator to help a unmanned aerial vehicle (UAV) to land on a wave-disturbed aquatic platform. I contributed to this project by assisting Ph.D. students in developing and validating the manipulator's end-effector and motion planning algorithm. For more information, please visit  \href{https://zixingjiang.com/projects/\#marine-robotics}{my homepage}\footnote{ \href{https://zixingjiang.com/projects/floating-manipulator/}{https://zixingjiang.com/projects/floating-manipulator/} (manipulator's motion planning algorithm), and \\ \href{https://zixingjiang.com/projects/tethered-landing/}{https://zixingjiang.com/projects/tethered-landing/}  (manipulator's end-effector)}.}
 \end{tablist}
 	
-\section*{Publications}
-\subsection*{Journal Article\footnote{\label{authorship}Notations: $^*$ co-first authors, $^\dagger$ corresponding authors}}
+\section*{Publications\protect\footnote{\label{authorship}\NoCaseChange{Notations: $^*$ co-first authors, $^\dagger$ corresponding authors}}}
+\subsection*{Journal Article}
 \begin{tablist}
 	\item[2024]  \tab{}R. Xu, \textbf{Z. Jiang}, B. Liu, Y. Wang, and H. Qian$^\dagger$, ``Confidence-Aware Object Capture for a Manipulator Subject to Floating-Base Disturbances,'' in \textit{IEEE Transactions on Robotics (T-RO)}, vol. 40, pp. 4396-4413, 2024,  doi: \href{https://doi.org/10.1109/TRO.2024.3463476}{10.1109/TRO.2024.3463476}.
 \end{tablist}
 	
-\subsection*{Conference Proceedings\footref{authorship}\footnote{\label{pre-author}Conference presenting author \textit{italicized} if other than the first author}}
+\subsection*{Conference Proceedings}
 \begin{tablist}
 	\item[2023]   \tab{}Y. Jiang, R. Xu, \textbf{Z. Jiang} and H. Qian$^\dagger$, ``Design, Modeling and Control of A Novel USV-Manipulator System,'' \textit{2023 IEEE International Conference on Real-time Computing and Robotics (RCAR)}, Datong, China, 2023, pp. 206-211, doi: \href{https://doi.org/10.1109/RCAR58764.2023.10249802}{ 10.1109/RCAR58764.2023.10249802}.
 		
@@ -181,13 +205,13 @@
 	
 	
 \section*{Conference Activity}
-\subsection*{Workshop Abstract Presented\footref{authorship}\footref{pre-author}}
+\subsection*{Workshop Presentation\footref{authorship}}
 \begin{tablist}
-	\item[2024] \tab \textbf{Z. Jiang}, Y. Hu, X. Luo, J. Miao, Y. Zhang, L. Lei, S. Wang, P.-A. Heng, Z. Li$^\dagger$, ``A Collaborative Robotic System with In-Plane Orientation Adjustment for Lung Ultrasonograph'', presented at workshop \textit{Autonomy in Robotic Surgery: State of the art, technical and regulatory challenges for clinical application}, 2024 IEEE International Conference on Robotics and Automation (ICRA), Yokohama, Japan, May 13, 2024. --- \textit{Abstract, poster, and videos available at \href{https://www.zixingjiang.com/icra2024/}{zixingjiang.com/icra2024/}.}
+	\item[2024] \tab \textbf{Z. Jiang}, Y. Hu, X. Luo, J. Miao, Y. Zhang, L. Lei, S. Wang, P.-A. Heng, and Z. Li$^\dagger$, ``A Collaborative Robotic System with In-Plane Orientation Adjustment for Lung Ultrasonograph'', presented at workshop \textit{Autonomy in Robotic Surgery: State of the art, technical and regulatory challenges for clinical application}, 2024 IEEE International Conference on Robotics and Automation (ICRA), Yokohama, Japan, May 13, 2024. --- \emph{Abstract, poster, and videos are available on \href{https://zixingjiang.com/icra2024/}{my homepage} \footnote{\href{https://zixingjiang.com/icra2024/}{https://zixingjiang.com/icra2024/}}.}
 \end{tablist}
 	
-\section*{Service}
-\subsection*{Academic Conference Reviewer}
+\section*{Academic Service}
+\subsection*{Peer Review}
 \begin{itemize}
 	\item \textit{The IEEE International Conference on Robotics and Automation (ICRA)}, 2025
 	\item \textit{The IEEE International Conference on Robotics and Biomimetics (ROBIO)}, 2023 
@@ -202,7 +226,7 @@
 \section*{Awards}
 \begin{tablist}
 	\item[2023]   \tab School of Science and Engineering Academic Year 2022--23 Dean's List Award, CUHK-Shenzhen
-	\item[2021--22]   \tab The 17--19th rounds of  Undergraduate Research Award, CUHK-Shenzhen
+	\item[2021--22]   \tab The 17th--19th rounds of  Undergraduate Research Award, CUHK-Shenzhen
 \end{tablist}
 	
 \section*{Technical Skills}
@@ -236,20 +260,20 @@
 	Department of Surgery\\
 	The Chinese University of Hong Kong\\
 	\vspace{\listitemspace}
-	\textbf{Relationship:} M.Phil. supervisor; Research supervisor
+	\textbf{Relationship:} Research \& M.Phil. supervisor
 
 	\vspace{10pt}
 	\item \textbf{Prof. QIAN Huihuan (Alex)} ~{\scriptsize \faEnvelope}\href{mailto:hhqian@cuhk.edu.cn}{hhqian@cuhk.edu.cn}\\
 	Associate Professor\\School of Science and Engineering\\The Chinese University of Hong Kong, Shenzhen\\
 	\vspace{\listitemspace}
-	\textbf{Relationship:} Undergraduate final year project supervisor; Research supervisor
+	\textbf{Relationship:} Research \& B.Eng. final year project supervisor
 
 \end{itemize}
 	
 % display today's date as Month Year after a vertical space below the end of the text
 \begin{center}
 	\vfill
-	Updated \monthyeardate\today. Check the latest version at:  \href{https://www.zixingjiang.com/cv/}{zixingjiang.com/cv/}
+	Updated \monthyeardate\today. Check the latest version at:  \href{https://zixingjiang.com/cv/}{https://zixingjiang.com/cv/}
 \end{center}
 	
 \end{document}
