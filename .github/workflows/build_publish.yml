@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'cv-zxjiang.tex'
+      - 'cv-zxjiang-zh.tex'
       - '.github/workflows/build_publish.yml'
   workflow_dispatch:
 
@@ -20,6 +21,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv-zxjiang.tex
+          latex_engine: pdflatex
 
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v4
@@ -27,8 +29,27 @@ jobs:
           name: built-pdf
           path: cv-zxjiang.pdf
 
-  publish_pdf:
+  build_latex_zh:
     needs: build_latex
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build PDF with xelatex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv-zxjiang-zh.tex
+          latex_engine: xelatex
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-pdf-zh
+          path: cv-zxjiang-zh.pdf      
+
+  publish_pdf:
+    needs: [build_latex, build_latex_zh]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout zixingjiang.github.io repo
@@ -44,6 +65,12 @@ jobs:
           name: built-pdf
           path: zixingjiang.github.io/files/pdf
 
+      - name: Download built PDF (ZH)
+        uses: actions/download-artifact@v4
+        with:
+          name: built-pdf-zh
+          path: zixingjiang.github.io/files/pdf
+
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
@@ -52,5 +79,6 @@ jobs:
           git config --global user.name 'zixingjiang'
           git config --global user.email 'zixingjiang@outlook.com'
           git add files/pdf/cv-zxjiang.pdf
-          git commit -m 'Update CV PDF (from zixingjiang/cv workflow)'
+          git add files/pdf/cv-zxjiang-zh.pdf
+          git commit -m 'Update CV PDFs (from zixingjiang/cv workflow)'
           git push
