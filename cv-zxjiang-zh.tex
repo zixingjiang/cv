@@ -32,10 +32,10 @@
 %\usepackage{tgheros}    % document's sans serif typeface
 
 % how far to tab for list items with left-aligned date: different fonts need different widths
-\newcommand{\listtabwidth}{1.9cm}
+\newcommand{\listtabwidth}{1.8cm}
 
 % define font to use as document's title
-\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+\newcommand{\namefont}[1]{{\normalfont\bfseries\LARGE{#1}}}
 
 
 % set section heading fonts and before/after spacing
@@ -48,9 +48,9 @@
 \titlespacing{\subsection}{0pt}{4pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
 
 % set page margins (assumes letter paper)
-\geometry{body={6.5in, 9.0in},
-	left=1.0in,
-	top=0.8in}
+\geometry{body={7in, 9.0in},
+	left=0.75in,
+	top=0.75in}
 
 % prevent paragraph indentation
 \setlength\parindent{0em}
@@ -90,9 +90,8 @@
 	citecolor   = blue,
 	linkcolor   = red,
 	pdfauthor   = {\myname},
-	pdftitle    = {\myname: Curriculum Vitae},
-	pdfsubject  = {Curriculum Vitae},
-	pdfpagemode = UseNone
+	pdftitle    = {\myname: 简历},
+	pdfsubject  = {简历}
 }
 
 
@@ -100,38 +99,39 @@
 \usepackage{fnpct}
 \addtolength{\skip\footins}{1.5pc plus 5pt}
 \renewcommand\thefootnote{\textcolor{red}{\arabic{footnote}}}
-
+\renewcommand\footnoterule{}
 
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 
 % Custom footer for the first page
-\fancypagestyle{firstpagefooter}{
+\fancypagestyle{lastpagefooter}{
 	\fancyhf{}
-	\fancyfoot[R]{\monthyeardate\today}
-	\fancyfoot[C]{第 \thepage 页， 共 \pageref{LastPage} 页}
+	\fancyfoot[L]{查看最新版本：\href{https://zixingjiang.com/cv/}{https://zixingjiang.com/cv/}}
+	\fancyfoot[R]{第 \thepage 页， 共 \pageref{LastPage} 页}
 	\renewcommand{\headrulewidth}{0pt}
-	\renewcommand{\footrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0.5pt}
 }
 
 % Custom footer for the rest of the pages
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[C]{第 \thepage 页， 共 \pageref{LastPage} 页}
+	\fancyfoot[L]{查看最新版本：\href{https://zixingjiang.com/cv/}{https://zixingjiang.com/cv/}}
+\fancyfoot[R]{第 \thepage 页， 共 \pageref{LastPage} 页}
 \renewcommand{\headrulewidth}{0pt}
-
+\renewcommand{\footrulewidth}{0.5pt}
 \begin{document}
-	\thispagestyle{firstpagefooter}
-	\raggedright{}
+\raggedright{}
 	
 % display your name as the document title
-\namefont{\myname}
-	
+\namefont{\myname} \hfill 更新于\monthyeardate\today
+\vspace{0.5em}
+\hrule width \hsize height 1pt \kern 1mm \hrule width \hsize 
 % affiliation and contact info blocks
 \vspace{1em}
 \begin{minipage}[t]{0.600\textwidth}
 	% current primary affiliation, left-aligned
-	香港中文大学医学院
+	香港中文大学医学院\\
 	外科学系在读硕士\\
 	中国香港，新界，沙田区
 \end{minipage}
@@ -146,8 +146,8 @@
 	
 \section*{教育背景}
 \begin{tablist}
-	\item[哲学硕士]  \tab{}外科学，香港中文大学，在读，2024--\\
-	\item[工学学士]  \tab{}电子信息工程（计算机工程专修），\textit{甲等荣誉}，香港中文大学（深圳），2023\\
+	\item[\textit{哲学硕士}]  \tab{}外科学，香港中文大学，在读，2024--\\
+	\item[\textit{工学学士}]  \tab{}电子信息工程（计算机工程专修），\textit{甲等荣誉}，香港中文大学（深圳），2023\\
 \end{tablist}
 	
 
@@ -158,7 +158,7 @@
 	研究助理，生物医学机器人实验室 \hfill \emph{\emph{2023} 年 \emph{11} 月至 \emph{2024} 年 \emph{7}  月}
 		
 	\item[2020--23]   \tab{}香港中文大学（深圳）机器人与人工智能实验室\hfill \textit{中国，广东，深圳}\\
-	学生研究助理， 手术机器人团队\hfill \emph{\emph{2023} 年 \emph{2} 月至 \emph{2023} 年 \emph{8}  月}\\
+	学生研究助理， 手术及协作机器人团队\hfill \emph{\emph{2023} 年 \emph{2} 月至 \emph{2023} 年 \emph{8}  月}\\
 学生研究助理， 海洋机器人团队 \hfill \emph{\emph{2020} 年 \emph{9} 月至 \emph{2023} 年 \emph{2}  月}
 \end{tablist}
 	
@@ -176,7 +176,7 @@
 	\item[2020--23] \tab 机械臂辅助无人机在受波浪扰动水面平台上降落 --- \textit{在香港中文大学（深圳）\href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{钱辉环教授}指导下参与的科研项目。该项目旨在使用机械臂辅助无人机在受波浪扰动的水面平台上降落。我对该项目的贡献是辅助博士研究生设计与验证机械臂的末端执行器和运动规划算法。详情请见我的\href{https://www.zixingjiang.com/projects\#marine-robotics}{个人主页}\footnote{ \href{https://zixingjiang.com/projects/floating-manipulator/}{https://zixingjiang.com/projects/floating-manipulator/} (机械臂运动规划算法)，和 \\ \href{https://zixingjiang.com/projects/tethered-landing/}{https://zixingjiang.com/projects/tethered-landing/}  (机械臂末端执行器)}。}
 \end{tablist}
 	
-\section*{发表著作\protect\footnote{\label{authorship}\NoCaseChange{$^*$ 标记的为共同第一作者, $^\dagger$ 标记的为通讯作者}}}
+\section*{发表著作\protect\footnote{\label{authorship}\NoCaseChange{用$^*$标记的为共同第一作者，用$^\dagger$标记的为通讯作者}}}
 \subsection*{学术期刊论文}
 \begin{tablist}
 	\item[2024]  \tab{}R. Xu, \textbf{Z. Jiang}, B. Liu, Y. Wang, and H. Qian$^\dagger$, ``Confidence-Aware Object Capture for a Manipulator Subject to Floating-Base Disturbances,'' in \textit{IEEE Transactions on Robotics (T-RO)}, vol. 40, pp. 4396-4413, 2024,  doi: \href{https://doi.org/10.1109/TRO.2024.3463476}{10.1109/TRO.2024.3463476}.
@@ -205,7 +205,7 @@
 \section*{会议活动}
 \subsection*{研讨会报告\footref{authorship}}
 \begin{tablist}
-	\item[2024] \tab \textbf{Z. Jiang}, Y. Hu, X. Luo, J. Miao, Y. Zhang, L. Lei, S. Wang, P.-A. Heng, and Z. Li$^\dagger$, ``A Collaborative Robotic System with In-Plane Orientation Adjustment for Lung Ultrasonograph'', presented at workshop \textit{Autonomy in Robotic Surgery: State of the art, technical and regulatory challenges for clinical application}, 2024 IEEE International Conference on Robotics and Automation (ICRA), Yokohama, Japan, May 13, 2024. --- \emph{报告摘要，海报，视频演示请见我的\href{https://zixingjiang.com/icra2024/}{个人主页} \footnote{\href{https://zixingjiang.com/icra2024/}{https://zixingjiang.com/icra2024/}}。}
+	\item[2024] \tab \textbf{Z. Jiang}, Y. Hu, X. Luo, J. Miao, Y. Zhang, L. Lei, S. Wang, P.-A. Heng, and Z. Li$^\dagger$, ``A Collaborative Robotic System with In-Plane Orientation Adjustment for Lung Ultrasonograph'', presented at workshop \textit{Autonomy in Robotic Surgery: State of the art, technical and regulatory challenges for clinical application}, 2024 IEEE International Conference on Robotics and Automation (ICRA), Yokohama, Japan, May 13, 2024. --- \emph{报告摘要，海报，及演示视频请见我的\href{https://zixingjiang.com/icra2024/}{个人主页} \footnote{\href{https://zixingjiang.com/icra2024/}{https://zixingjiang.com/icra2024/}}。}
 \end{tablist}
 	
 \section*{学术服务}
@@ -229,15 +229,15 @@
 	
 \section*{专业技能}
 \begin{tablist}
-	\item[编程语言] \tab Python，C++，C，MATLAB
-	\item[机器人学] \tab 全栈机器人开发经验，侧重运动规划和控制
-	\item [图像处理] \tab 时空域滤波， 图像分割， 图像配准
-	\item[专业软件] \tab 机器人开发： ROS，MoveIt，Gazebo，CoppeliaSim\\
+	\item[\textit{编程语言}] \tab Python，C++，C，MATLAB
+	\item[\textit{机器人学}] \tab 全栈机器人开发经验，侧重运动规划和控制
+	\item [\textit{图像处理}] \tab 时空域滤波， 图像分割， 图像配准
+	\item[\textit{专业软件}] \tab 机器人开发： ROS，MoveIt，Gazebo，CoppeliaSim\\
 	科学计算 / 数据分析 / 机器学习： Eigen，NumPy，pandas，PyTorch，scikit-learn\\
 	二维及三维视觉：OpenCV，Open3D，3D Slicer\\
 	计算机辅助设计：SolidWorks\\
 	其他：Docker，DaVinci Resolve，\LaTeX
-	\item[硬件设备] \tab 开发平台：Linux，Arduino，树莓派，STM32，ESP32，FPGA\\
+	\item[\textit{硬件设备}] \tab 开发平台：Linux，Arduino，树莓派，STM32，ESP32，FPGA\\
 	机器人：机械臂，扑翼飞行器，无人机，无人车，无人船\\ 
 	传感器：深度相机，六轴力传感器，光学定位跟踪系统\\
 	交互设备： 触觉式力反馈设备，摇杆\\
@@ -247,10 +247,11 @@
 
 \section*{掌握语言}
 \begin{tablist}
-	\item[中文] \tab 普通话 -- 母语
-	\item[英语] \tab 流利
+	\item[\textit{中文}] \tab 普通话 -- 母语
+	\item[\textit{英语}] \tab 流利
 \end{tablist}
-\newpage
+\vfill
+\hrule width \hsize \kern 1mm \hrule width \hsize height 1pt 
 \section*{推荐人}
 \begin{itemize}
 	\item \textbf{李峥}~ 香港中文大学外科学系副教授\\
@@ -261,13 +262,17 @@
 	\item \textbf{钱辉环}~ 香港中文大学（深圳）理工学院副教授\\
 	关系：本科毕业设计导师\\
 	{\scriptsize \faEnvelope}\href{mailto:hhqian@cuhk.edu.cn}{hhqian@cuhk.edu.cn}\\
-
 \end{itemize}
-	
+%\hrule width \hsize \kern 1mm \hrule width \hsize height 1pt 
 % display today's date as Month Year after a vertical space below the end of the text
-\begin{center}
-	\vfill
-	更新于 \monthyeardate\today。在此链接查看最新版本：\href{https://zixingjiang.com/cv/}{https://zixingjiang.com/cv/}。
-\end{center}
-	
+%\begin{center}
+%	\vfill
+%	更新于 \monthyeardate\today，查看最新版本：\href{https://zixingjiang.com/cv/}{https://zixingjiang.com/cv/}
+%	\vspace{5pt}
+%	\hrule
+%\hrule
+%\vspace{2pt}
+%\hrule
+%\end{center}
+
 \end{document}
