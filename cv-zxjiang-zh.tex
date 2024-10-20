@@ -47,10 +47,18 @@
 \titleformat{\subsection}{\CJKfamily{zhyahei}\sffamily\small}{}{}{}{}
 \titlespacing{\subsection}{0pt}{4pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
 
+%% set page margins (assumes letter paper)
+%\geometry{body={6.8in, 9.0in},
+%	left=0.9in,
+%	top=0.75in}
+	
 % set page margins (assumes letter paper)
-\geometry{body={7in, 9.0in},
-	left=0.75in,
-	top=0.75in}
+\geometry{
+	left=0.8in,
+	right=0.8in,
+	top=0.6in,
+	bottom=1.2in
+}
 
 % prevent paragraph indentation
 \setlength\parindent{0em}
@@ -99,7 +107,7 @@
 \usepackage{fnpct}
 \addtolength{\skip\footins}{1.5pc plus 5pt}
 \renewcommand\thefootnote{\textcolor{red}{\arabic{footnote}}}
-\renewcommand\footnoterule{}
+%\renewcommand\footnoterule{}
 
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -115,8 +123,7 @@
 
 % Custom footer for the rest of the pages
 \pagestyle{fancy}
-\fancyhf{}
-	\fancyfoot[L]{查看最新版本：\href{https://zixingjiang.com/cv/}{https://zixingjiang.com/cv/}}
+\fancyhf{}	\fancyfoot[L]{查看最新版本：\href{https://zixingjiang.com/cv/}{https://zixingjiang.com/cv/}}
 \fancyfoot[R]{第 \thepage 页， 共 \pageref{LastPage} 页}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.5pt}
@@ -140,7 +147,7 @@
 	% contact info details, right-aligned
 	\flushright{}
 	电邮：\href{mailto:zxjiang@surgery.cuhk.edu.hk}{zxjiang@surgery.cuhk.edu.hk} \\
-	电话（香港）：+852 5954 9660 \\
+	电话：+86 133 0585 1000\\
 	个人主页：\href{https://zixingjiang.com}{https://zixingjiang.com}\\
 \end{minipage}
 	
@@ -157,7 +164,7 @@
 	\item[2023--24]   \tab{}香港中文大学外科学系 \hfill \textit{中国香港}\\
 	研究助理，生物医学机器人实验室 \hfill \emph{\emph{2023} 年 \emph{11} 月至 \emph{2024} 年 \emph{7}  月}
 		
-	\item[2020--23]   \tab{}香港中文大学（深圳）机器人与人工智能实验室\hfill \textit{中国，广东，深圳}\\
+	\item[2020--23]   \tab{}香港中文大学（深圳）机器人与人工智能实验室\hfill \textit{广东，深圳}\\
 	学生研究助理， 手术及协作机器人团队\hfill \emph{\emph{2023} 年 \emph{2} 月至 \emph{2023} 年 \emph{8}  月}\\
 学生研究助理， 海洋机器人团队 \hfill \emph{\emph{2020} 年 \emph{9} 月至 \emph{2023} 年 \emph{2}  月}
 \end{tablist}
@@ -165,15 +172,18 @@
 \section*{研究领域}
 \begin{itemize}
 	\item 机器人学 / 医疗机器人 / 手术机器人
-	\item 机器人图像引导介入
-	\item 机器人辅助成像
+	\item 机器人辅助成像及图像引导介入 
 \end{itemize}
 	
 \section*{部分项目经历}
 \begin{tablist}
-	\item[2023--24] \tab 机器人自主肺部超声检查 --- \emph{在香港中文大学\href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{李峥教授}和\href{https://www.cse.cuhk.edu.hk/people/faculty/pheng-ann-heng/}{王平安教授}指导下参与的科研项目。该项目旨在使用机器人在重症监护室中自主为病人执行床边肺部超声检查，从而在疫情期间降低医护人员感染风险。我对该项目的贡献是作为机器人系统负责人，开发了一台机器人超声系统原型机并辅助对其的临床前测试。该原型机运行时的视频演示请见我的\href{https://www.zixingjiang.com/projects/robotic-lus/}{个人主页}\footnote{ \href{https://zixingjiang.com/projects/robotic-lus/}{https://zixingjiang.com/projects/robotic-lus/}}。}
+	\item[2023--24] \tab 机器人自主肺部超声检查\\
+	\vspace{\listitemspace}
+	 \emph{在香港中文大学\href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{李峥教授}和\href{https://www.cse.cuhk.edu.hk/people/faculty/pheng-ann-heng/}{王平安教授}指导下参与的科研项目。该项目旨在使用机器人在重症监护室中自主为病人执行床边肺部超声检查，从而在疫情期间降低医护人员感染风险。我对该项目的贡献是作为机器人系统负责人，开发了一台机器人超声系统原型机并辅助对其的临床前测试。该原型机的演示视频请见我的\href{https://www.zixingjiang.com/projects/robotic-lus/}{个人主页}\footnote{ \href{https://zixingjiang.com/projects/robotic-lus/}{https://zixingjiang.com/projects/robotic-lus/}}。}
 	
-	\item[2020--23] \tab 机械臂辅助无人机在受波浪扰动水面平台上降落 --- \textit{在香港中文大学（深圳）\href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{钱辉环教授}指导下参与的科研项目。该项目旨在使用机械臂辅助无人机在受波浪扰动的水面平台上降落。我对该项目的贡献是辅助博士研究生设计与验证机械臂的末端执行器和运动规划算法。详情请见我的\href{https://www.zixingjiang.com/projects\#marine-robotics}{个人主页}\footnote{ \href{https://zixingjiang.com/projects/floating-manipulator/}{https://zixingjiang.com/projects/floating-manipulator/} (机械臂运动规划算法)，和 \\ \href{https://zixingjiang.com/projects/tethered-landing/}{https://zixingjiang.com/projects/tethered-landing/}  (机械臂末端执行器)}。}
+	\item[2020--23] \tab 机械臂辅助无人机在受波浪扰动水面平台上降落\\
+	\vspace{\listitemspace}
+	\textit{在香港中文大学（深圳）\href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{钱辉环教授}指导下参与的科研项目。该项目旨在使用机械臂辅助无人机在受波浪扰动的水面平台上降落。我对该项目的贡献是辅助博士研究生设计与验证机械臂的末端执行器和运动规划算法。详情请见我的\href{https://www.zixingjiang.com/projects\#marine-robotics}{个人主页}\footnote{ \href{https://zixingjiang.com/projects/floating-manipulator/}{https://zixingjiang.com/projects/floating-manipulator/} (机械臂运动规划算法)，和 \\ \href{https://zixingjiang.com/projects/tethered-landing/}{https://zixingjiang.com/projects/tethered-landing/}  (机械臂末端执行器)}。}
 \end{tablist}
 	
 \section*{发表著作\protect\footnote{\label{authorship}\NoCaseChange{用$^*$标记的为共同第一作者，用$^\dagger$标记的为通讯作者}}}
