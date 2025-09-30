@@ -20,8 +20,8 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[fixed]{fontawesome5}
 \usepackage{textcase}
-
-
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
 
 % what is your name?
 \newcommand{\myname}{JIANG Zixing}
@@ -29,9 +29,6 @@
 % select default typefaces
 \usepackage{ebgaramond} % document's serif font
 \usepackage{tgheros}  % document's sans serif font
-
-%\usepackage{ebgaramond} % document's serif typeface
-%\usepackage{tgheros}    % document's sans serif typeface
 
 % how far to tab for list items with left-aligned date: different fonts need different widths
 \newcommand{\listtabwidth}{1.7cm}
@@ -112,7 +109,7 @@
 % Custom footer for the first page
 \fancypagestyle{firstpagefooter}{
 	\fancyhf{}
-	\fancyfoot[R]{\monthyeardate\today}
+	%\fancyfoot[R]{\monthyeardate\today}
 	\fancyfoot[C]{\thepage ~of \pageref{LastPage}}
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
@@ -134,10 +131,9 @@
 % affiliation and contact info blocks
 \vspace{1em}
 \begin{minipage}[t]{0.700\textwidth}
-	% current primary affiliation, left-aligned
-	M.Phil. Student, Department of Surgery\\
-	Faculty of Medicine, The Chinese University of Hong Kong\\
-	Sha Tin, N.T., Hong Kong, China
+	Department of Surgery\\ 
+	Faculty of Medicine\\
+	The Chinese University of Hong Kong (CUHK)
 \end{minipage}
 \hfil
 \begin{minipage}[t]{0.295\textwidth}
@@ -148,202 +144,184 @@
 	\href{https://zixingjiang.com}{https://zixingjiang.com}\\
 \end{minipage}
 	
-\section*{Education}
+	\section*{Education}
 \begin{tablist}
-	\item[M.Phil.]  \tab{}Surgery, The Chinese University of Hong Kong (CUHK), China, In progress 2024--\\
-	\item[B.Eng.]  \tab{}Electronic Information Engineering, \textit{First-Class Honors}, CUHK-Shenzhen, China, 2023
-	
-	\textit{Final Year Project: Control of the Multi-Joint Manipulator for Grasping on Water Surface, supervised by \href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{Prof. QIAN Huihuan}.}
+	\item[M.Phil.]  \tab{}Surgery, CUHK, In progress 2024-- \\
+	Research Topic: Robotic Ultrasound Imaging and Ultrasound-Guided Biopsy, supervised by \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{Prof. LI Zheng}
+	\item[B.Eng.]  \tab{}Electronic Information Engineering, \textit{First-Class Honors}, CUHK-Shenzhen, 2023\\
+	Final Year Project: Control of the Multi-Joint Manipulator for Grasping on Water Surface, supervised by \href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{Prof. QIAN Huihuan}
 \end{tablist}
-	
 
-\section*{Experience}
-\begin{tablist}	
-	\item[2023--24]   \tab{}Department of Surgery, CUHK \hfill Hong Kong, China
+
+
+\section*{Professional Experience}
+\begin{tablist}
+	\item[2023--24]   \tab{}Advanced Bio-Medical Robotics Laboratory (ABML), CUHK \\
+	Research Assistant, Robotic Ultrasound Project
 	
-	\textit{Research Assistant, Advanced Bio-Medical Robotics Lab} \hfill \textit{Nov. 2023 -- Jul. 2024}
-		
-	\item[2020--23]   \tab{}Robotics \& AI Lab (RAIL), CUHK-Shenzhen \hfill Shenzhen, China
-	
-	\textit{Research Intern, SUN Group (surgical robots and medical devices)} \hfill \textit{Feb. 2023 -- Aug. 2023}\\
-	\textit{Research Intern, Advanced Marine Robotics Group} \hfill \textit{Sept. 2020 -- Feb. 2023}
+	\item[2020--23]   \tab{}Robotics \& Artificial Intelligence Laboratory (RAIL), CUHK-Shenzhen \\
+	Research Intern, Medical Robotics Group, 2023.02--08\\
+	Research Intern, Marine Robotics Group, 2020.09--2023.02
 \end{tablist}
-	
 \section*{Research Interests}
 \begin{itemize}
-	\item Robotics; Medical Robotics; Surgical Robotics
-	\item Image-Guided Robotic Interventions
-	\item Robot-Assisted Imaging
+	\item Robotics: Calibration, Perception, Motion Planning \& Control
+	\item Medical Robotics: Image-Guided Robotic Interventions, Robot-Assisted Imaging
 \end{itemize}
-	
+
 \section*{Selected Projects}
-\begin{tablist}
-	
-	\item[2024--] \tab Robotic Ultrasound-Guided Prostate Biopsy
+\includegraphics[width=0.22\linewidth, valign=T]{img/usrobot}\hfill
+\begin{minipage}[t]{0.75\linewidth}
+	\vspace{0pt}\par
+\begin{itemize}
+	\item Robotic Ultrasound Imaging\\ABML, CUHK, 2023--
+	\item Participating in a research project aimed at developing a robotic system for teleoperated and autonomous ultrasound examinations.
+	\item My contributions: system integration; development of core algorithms including visual servoing, force control, motion planning, teleoperation, etc; assistance in conducting preclinical validation for lung ultrasound applications.
+\end{itemize}
+\end{minipage}\\~\\
 
-	\textit{Ongoing research project at CUHK, supervised by  \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{Prof. LI Zheng} and \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=peterchiu}{Prof. CHIU Ka Feng Peter}.}
-	
-	\textit{Developing an ultrasound image-guided needle navigation program for a prostate biopsy robot and assisting in related clinical tests.}
-	
-	\item[2023--24] \tab Autonomous Robotic Lung Ultrasound
-	
-	\textit{Research project at CUHK, supervised by \href{https://www.surgery.cuhk.edu.hk/profile.asp?alias=zli}{Prof. LI Zheng} and \href{https://www.cse.cuhk.edu.hk/people/faculty/pheng-ann-heng/}{Prof. HENG Pheng Ann}.}
-	
-	\emph{Developed a robot prototype for autonomous lung ultrasound and assisted in its preclinical validations.}
+\includegraphics[width=0.22\linewidth, valign=T]{img/prostate-biopsy}\hfill
+\begin{minipage}[t]{0.75\linewidth}
+	\vspace{0pt}\par
+	\begin{itemize}
+		\item Robot-Assisted Prostate Biopsy\\ABML, CUHK, 2024--
+		\item Participating in a research project aimed at developing an assistive navigation robot for ultrasound-guided transperineal prostate biopsy.
+		\item My contributions: development of navigation and visualization interface; assistance in conducting clinical trials. 
+	\end{itemize}
+\end{minipage}\\~\\
 
-	\item[2020--23] \tab Manipulator-Assisted UAV Landing System for USV
-	
-	\textit{Research project at CUHK-Shenzhen, supervised by \href{https://sse.cuhk.edu.cn/en/faculty/qianhuihuan}{Prof. QIAN Huihuan}.}
-	
-	\emph{Assisted in developing end-effectors and motion planning algorithms for a manipulator-assisted system that facilitates unmanned aerial vehicles (UAVs) landing on unmanned surface vehicles (USVs) in the presence of wave disturbances. }	
-\end{tablist}
-	
-\section*{Publications\protect\footnote{\label{authorship}\NoCaseChange{Notations: $^*$ co-first authors, $^\dagger$ corresponding authors.}}}
+\includegraphics[width=0.22\linewidth, valign=T]{img/usv-uav}\hfill
+\begin{minipage}[t]{0.75\linewidth}
+	\vspace{0pt}\par
+	\begin{itemize}
+			\item USV-UAV Cooperative System\\RAIL, CUHK-Shenzhen, 2020--23
+			\item Engaged in a research project aimed at developing an unmanned surface vehicle (USV) as a carrier for unmanned aerial vehicles (UAVs) for marine applications.
+			\item My contributions: assistance in developing manipulator-assisted UAV launch and recovery solutions, including end-effector design and motion planning algorithms.
+		\end{itemize}
+\end{minipage}
+
+\section*{Publications}
 \subsection*{Journal Articles}
 \begin{tablist}
-%	\item[2025] \tab Y. Hu, Y. Song, \textbf{Z. Jiang}, L. Lei, X. Luo, K. Alois, P.-A. Heng, and Z. Li$^\dagger$, ``Deep Imitation Learning for Fully Autonomous Robotic Lung Ultrasound Scanning'', in \textit{IEEE Transactions on Robotics (T-RO)}, 2025
-%	
-%	\item[2025] \tab \textbf{Z. Jiang}, Y. Hu, and Z. Li$^\dagger$, ``Universal Hand-Eye Calibration for Robotic and Freehand Ultrasound: A Conic Section Approach'', in \textit{IEEE Robotics and Automation Letters (RA-L)}, 2025
-%	
-%	
-	\item[2025]	 \tab{}L. Lei$^*$, Y. Hu$^*$, \textbf{Z. Jiang}$^*$, J. Miao, X. Luo, Y. Zhang, Q. Wang, S. Wang$^\dagger$, Z. Li$^\dagger$, and P.-A. Heng, ``Towards Lung Ultrasound Automation: Fully Automonous Robotic Longitudinal and Transverse Scans Along Intercostal Spaces,'' in \textit{IEEE Transactions on Medical Robotics and Bionics (T-MRB)}, Early Access, 2025, doi: \href{https://doi.org/10.1109/TMRB.2025.3550663}{10.1109/TMRB.2025.3550663}.
+	\item[2025]	 \tab{}L. Lei$^*$, Y. Hu$^*$, \textbf{Z. Jiang}$^*$, J. Miao, X. Luo, Y. Zhang, Q. Wang, S. Wang, Z. Li, and P.-A. Heng, ``Towards Lung Ultrasound Automation: Fully Automonous Robotic Longitudinal and Transverse Scans Along Intercostal Spaces,'' \textit{IEEE Transactions on Medical Robotics and Bionics}, vol. 7, no. 2, pp. 768--781, doi: \href{https://doi.org/10.1109/TMRB.2025.3550663}{10.1109/TMRB.2025.3550663} ($^*$ indicates co-first authors).
 	
-	\item[2024]  \tab{}R. Xu, \textbf{Z. Jiang}, B. Liu, Y. Wang, and H. Qian$^\dagger$, ``Confidence-Aware Object Capture for a Manipulator Subject to Floating-Base Disturbances,'' in \textit{IEEE Transactions on Robotics (T-RO)}, vol. 40, pp. 4396-4413, 2024,  doi: \href{https://doi.org/10.1109/TRO.2024.3463476}{10.1109/TRO.2024.3463476}.
+	\item[2024]  \tab{}R. Xu, \textbf{Z. Jiang}, B. Liu, Y. Wang, and H. Qian, ``Confidence-Aware Object Capture for a Manipulator Subject to Floating-Base Disturbances,'' \textit{IEEE Transactions on Robotics}, vol. 40, pp. 4396--4413, doi: \href{https://doi.org/10.1109/TRO.2024.3463476}{10.1109/TRO.2024.3463476}.
 \end{tablist}
 	
-\subsection*{Conference Papers}
+\subsection*{Conference Proceedings}
 \begin{tablist}
-%	\item[2025] \tab X. Luo, \textbf{Z. Jiang}, M. C. Lei, Y. Xian, Y. Hu, A. Dong, P. K. F. Chiu, Y. Liu, and Z. Li$^\dagger$, ``Design and Geometry-Aware Planning of a Novel Probe-Scanning Manipulator with RCM Constraint'', \textit{2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Hangzhou, China, 2025}
-%	
+	\item[2025] \tab X. Luo, \textbf{Z. Jiang}, M. C. Lei, Y. Xian, Y. Hu, A. Dong, P. K. F. Chiu, Y.-H. Liu, and Z. Li, ``Design and Geometry-Aware Planning of a Novel Probe-Scanning Manipulator with RCM Constraint,'' \textit{2025 IEEE/RSJ International Conference on Intelligent Robots and Systems,} Hangzhou, China, in press (\textcolor{magenta}{Best Paper Award Finalist}).
 	
-	\item[2023]   \tab{}Y. Jiang, R. Xu, \textbf{Z. Jiang} and H. Qian$^\dagger$, ``Design, Modeling and Control of A Novel USV-Manipulator System,'' \textit{2023 IEEE International Conference on Real-time Computing and Robotics (RCAR)}, Datong, China, 2023, pp. 206-211, doi: \href{https://doi.org/10.1109/RCAR58764.2023.10249802}{ 10.1109/RCAR58764.2023.10249802}.
+	\item[2023]   \tab{}Y. Jiang, R. Xu, \textbf{Z. Jiang} and H. Qian, ``Design, Modeling and Control of A Novel USV-Manipulator System,'' \textit{2023 IEEE International Conference on Real-time Computing and Robotics}, Datong, China, pp. 206-211, doi: \href{https://doi.org/10.1109/RCAR58764.2023.10249802}{ 10.1109/RCAR58764.2023.10249802}.
 		
-	\item[2022]   \tab{}C. Liu, \textbf{Z. Jiang}, R. Xu, X. Ji, L. Zhang and H. Qian$^\dagger$, ``Design and Optimization of a Magnetic Catcher for UAV Landing on Disturbed Aquatic Surface Platforms,'' \textit{2022 International Conference on Robotics and Automation (ICRA)}, Philadelphia, PA, USA, 2022, pp. 1162-1168, doi: \href{https://doi.org/10.1109/ICRA46639.2022.9812270}{ 10.1109/ICRA46639.2022.9812270}.
+	\item[2022]   \tab{}C. Liu, \textbf{Z. Jiang}, R. Xu, X. Ji, L. Zhang and H. Qian, ``Design and Optimization of a Magnetic Catcher for UAV Landing on Disturbed Aquatic Surface Platforms,'' \textit{2022 International Conference on Robotics and Automation}, Philadelphia, PA, USA, pp. 1162-1168, doi: \href{https://doi.org/10.1109/ICRA46639.2022.9812270}{ 10.1109/ICRA46639.2022.9812270}.
 \end{tablist}
-	
+
 \subsection*{Patents}
 \begin{tablist}	
-	\item[2024]   \tab{}C. Liu, Z. Cao, \textbf{Z. Jiang}, R. Xu, X. Ji, and H. Qian, ``Unmanned aerial vehicle landing system, landing method and storage medium,'' Chinese patent \href{https://patents.google.com/patent/CN115167522A/en?oq=CN115167522A}{CN115167522B}, granted Nov. 1, 2024.	
-		
-	\item[2023]   \tab{}\textbf{Z. Jiang}, X. Ji, C. Liu, and H. Qian, ``Four-wing flapping wing micro water surface aircraft and flight method,'' Chinese patent \href{https://patents.google.com/patent/CN114889821B/en?oq=CN114889821B}{CN114889821B}, granted Feb. 24, 2023.
-		
-	\item[2022]   \tab{}X. Ji, Z. Song, \textbf{Z. Jiang}, and H. Qian, ``Flapping wing mechanism and miniature water surface flapping wing aircraft,'' Chinese patent \href{https://patents.google.com/patent/CN217320745U/en?oq=CN217320745U}{CN217320745U}, granted Aug. 30, 2022.  
-		
-	\item[2022]   \tab{}X. Ji, Z. Song, \textbf{Z. Jiang}, and H. Qian, ``Flapping wing mechanism based on double cranks and micro water surface flapping wing aircraft,'' Chinese patent \href{https://patents.google.com/patent/CN217320744U/en?oq=CN217320744U}{CN217320744U}, granted Aug. 30, 2022.  
+	\item[2024]   \tab{}C. Liu, Z. Cao, \textbf{Z. Jiang}, R. Xu, X. Ji, and H. Qian, \textit{Unmanned Aerial Vehicle Landing System, Landing Method and Storage Medium}, Chinese patent \href{https://patents.google.com/patent/CN115167522B/en?oq=CN115167522B}{CN115167522B}.	
+	
+	\item[2023]   \tab{}\textbf{Z. Jiang}, X. Ji, C. Liu, and H. Qian, \textit{Four-wing Flapping Wing Micro Water Surface Aircraft and Flight Method}, Chinese patent \href{https://patents.google.com/patent/CN114889821B/en?oq=CN114889821B}{CN114889821B}.
+	
+	\item[2022]   \tab{}X. Ji, Z. Song, \textbf{Z. Jiang}, and H. Qian, \textit{Flapping Wing Mechanism and Miniature Water Surface Flapping Wing Aircraft}, Chinese patent \href{https://patents.google.com/patent/CN217320745U/en?oq=CN217320745U}{CN217320745U}.  
+	
+	\item[2022]   \tab{}X. Ji, Z. Song, \textbf{Z. Jiang}, and H. Qian, \textit{Flapping Wing Mechanism based on Double Cranks and Micro Water Surface Flapping Wing Aircraft}, Chinese patent \href{https://patents.google.com/patent/CN217320744U/en?oq=CN217320744U}{CN217320744U}.  
 \end{tablist}
-	
-	
-	
-\section*{Abstracts \& Presentations}
+
+\section*{Conference Activity}
+\subsection*{Conference Presentation}
+Presenting author \textit{italicized} if other than first author.\vspace{1ex}\\
 \begin{tablist}	
-	\item[2024] \tab \textbf{Z. Jiang}, Y. Hu, X. Luo, J. Miao, Y. Zhang, L. Lei, S. Wang, P.-A. Heng, and Z. Li, ``A Collaborative Robotic System with In-Plane Orientation Adjustment for Lung Ultrasonography,'' presented at workshop \textit{Autonomy in Robotic Surgery: State of the art, technical and regulatory challenges for clinical application}, 2024 IEEE International Conference on Robotics and Automation (ICRA), Yokohama, Japan, May 13, 2024.
+	\item[2024] \tab \textbf{Z. Jiang}, Y. Hu, X. Luo, J. Miao, Y. Zhang, L. Lei, S. Wang, P.-A. Heng, and Z. Li, ``A Collaborative Robotic System with In-Plane Orientation Adjustment for Lung Ultrasonography,'' presented at workshop \textit{Autonomy in Robotic Surgery: State of the art, technical and regulatory challenges for clinical application}, ICRA 2024, Yokohama, Japan, May 13.
 \end{tablist}
 	
-\section*{Open Source Contributions}
-\subsection*{Author \& Maintainer}
+		
+\section*{Awards and Honors}
+\begin{tablist}	
+	\item[2025] \tab Prof. Charles K. Kao Student Creativity Awards, CUHK\\
+	Finalist, Team: \textit{A Novel Robotic System for Minimally Invasive Transperineal Prostate Biopsy with Enhanced Safety.}
+	
+	\item[2024] \tab The 14th ``Challenge Cup'' Qin Chuang Yuan National College Students' Entrepreneurship Competition, China\\
+	Bronze Award, Team: \textit{ColoMAG: A Magnet-Assisted System for Colorectal Cancer Screening and Early Surgical Treatment.}	
+
+	\item[2023]   \tab School of Science and Engineering Academic Year 2022--23 Dean's List Award, CUHK-Shenzhen
+	
+	\item[2021--22]   \tab The 17--19th rounds of  Undergraduate Research Award, CUHK-Shenzhen\\
+	Project: \textit{Bio-Inspired Robot for Aquatic-Aerial Hybrid Locomotion.}
+	
+	\item[2020] \tab RoboCom Robot Developer Competition (southern China regional)\\
+	{Second Prize, semi-autonomous palletizing competition};\\
+	{Third Prize, semi-autonomous palletizing time trial};\\
+	{Third Prize, autonomous palletizing competition};\\
+	\textit{CUHK-Shenzhen representative team}.
+\end{tablist}
+
+\section*{Extracurricular Activity}
+\begin{tablist}
+	\item[2020--22]   \tab President, Student Robotics Association, CUHK-Shenzhen 
+\end{tablist}
+
+\section*{Service}
+\subsection*{Academic Journal Peer Review}
 \begin{itemize}
-	\item \texttt{ndi\_ros2\_driver} (\href{https://github.com/zixingjiang/ndi_ros2_driver}{https://github.com/zixingjiang/ndi\_ros2\_driver})
-	
-	\textit{ROS2-control integration for Northern Digital Inc. (NDI) electromagnetic tracking and optical navigation systems.}
-	
-	\item \texttt{minimal\_handeye\_ros2} (\href{https://github.com/zixingjiang/minimal_handeye_ros2}{https://github.com/zixingjiang/minimal\_handeye\_ros2})
-	
-	\textit{A minimal hand-eye calibration node for ROS 2.}
+	\item \textit{IEEE Robotics and Automation Letters}
+\end{itemize}
+\subsection*{Conference Peer Review}
+\begin{itemize}
+	\item \textit{IEEE International Conference on Robotics and Automation}
+	\item \textit{IEEE/RSJ International Conference	on Intelligent Robots and Systems}
+	\item \textit{IEEE International Conference on Robotics and Biomimetics}
+\end{itemize}
+
+
+\section*{Course Taught}
+\begin{itemize}
+	\item BMEG5750 Medical Robotics, CUHK (Teaching Assistant)
+\end{itemize}
+
+\section*{Open Source Contributions}
+\subsection*{Maintainer}
+\begin{itemize}
+	\item  \href{https://github.com/zixingjiang/minimal_handeye_ros2}{minimal\_handeye\_ros2}\faGithub: A minimal ROS2 node for calculating the hand-eye calibration problem.
+	\item  \href{https://github.com/zixingjiang/ndi_ros2_driver}{ndi\_ros2\_driver}\faGithub: ROS2-control integration for Northern Digital Inc. (NDI) electromagnetic tracking and optical navigation systems.
 \end{itemize}
 \subsection*{Contributor}
 \begin{itemize}
-	\item \texttt{cartesian\_controllers} (\href{https://github.com/fzi-forschungszentrum-informatik/cartesian_controllers}{https://github.com/fzi-forschungszentrum-informatik/cartesian\_controllers})
-	
-	\textit{A set of Cartesian controllers for the ROS1 and ROS2-control framework.}
+	\item \href{https://github.com/fzi-forschungszentrum-informatik/cartesian_controllers}{cartesian\_controllers}\faGithub: A set of Cartesian controllers for the ROS1 and ROS2-control framework.
+	\item \href{https://github.com/PlusToolkit}{PLUS (Public software Library for UltraSound) Toolkit}\faGithub: Open-source toolkit for data acquisition, pre-processing, and calibration for navigated image-guided interventions.
 \end{itemize}
-	
-\section*{Peer Review}
-\subsection*{Academic Conferences}
+
+\section*{Skills}
 \begin{itemize}
-	\item \textit{The IEEE International Conference on Robotics and Automation (ICRA)}
-	\item \textit{The IEEE/RSJ International Conference	on Intelligent Robots and Systems (IROS)}
-	\item \textit{The IEEE International Conference on Robotics and Biomimetics (ROBIO)}
+	\item {Programming Languages:} Python, C++, C, MATLAB
+	\item {Software:} ROS, SolidWorks, OpenCV, Open3D, MuJoCo, SOFA, 3D Slicer, \LaTeX, and more
+	\item {Hardware:} Experience with robotic arms (Universal Robots UR5, Franka Emika Panda, Interbotix WidowX-250), microcontrollers (Arduino, STM32, ESP32), single-board computers (Raspberry Pi), and diverse sensors (RGB-D cameras, ultrasound, optical, force/torque, haptic, magnetic field, etc.)
+	\item {Languages:} Chinese (native), English (fluent)
 \end{itemize}
-	
-\section*{Teaching}
-\begin{tablist}
-\item[2025] \tab Teaching Assistant, Medical Robotics (BMEG5750), Postgraduate Course, CUHK
-\end{tablist}
-	
-\section*{Leadership}
-\begin{tablist}
-	\item[2020--22]   \tab President, RAIL Student Robotics Association, CUHK-Shenzhen 
-\end{tablist}
-	
-\section*{Awards}
-\begin{tablist}	
-%	\item[2025] \tab Finalist (Group), Prof. Charles K. Kao Student Creativity Awards, CUHK
-%	
-%	\textit{A Novel Robotic System for Minimally Invasive Transperineal Prostate Biopsy with Enhanced Safety.}
-%	
-	
-	\item[2024] \tab Bronze Award (Team), The 14th ``Challenge Cup'' QinChuangYuan Platform National College Students' Entrepreneurship Competition, China
 
-	\textit{ColoMAG: A Magnet-Assisted System for Colorectal Cancer Screening and Early Surgical Treatment.}	
-
-	\item[2023]   \tab School of Science and Engineering Academic Year 2022--23 Dean's List Award, CUHK-Shenzhen
-	\item[2021--22]   \tab The 17--19th rounds of  Undergraduate Research Award, CUHK-Shenzhen
-	
-	\textit{Bio-inspired Robot for Aquatic-Aerial Hybrid Locomotion.}
-	
-	\item[2020] \tab RoboCom\footnote{RoboCom renamed to RAICOM in 2023.} Robot Developer Competition -- ``Treasure Hunter'' Southern China Regional Competition
-	
-	\textit{Second Prize (Team) in Semi-Autonomous Robot Palletizing Competition;}
-	
-	\textit{Third Prize (Team) in Semi-Autonomous Robot Palletizing Timed Race;}
-	
-	\textit{Third Prize (Team) in Autonomous Robot Palletizing Competition.}
-\end{tablist}
-	
-\section*{Technical Skills}
-\begin{tablist}
-	\item[Coding] \tab Python, C++, C, MATLAB
-	\item[Robotics] \tab Possesses full-stack robotics development experience, with a focus on motion planning and control
-	\item[Software] \tab Libraries: ROS, Eigen, NumPy, OpenCV, Open3D, PyTorch\\
-	Simulators: Gazebo, CoppeliaSim, SOFA\\
-	3D Modeling: SolidWorks, Blender\\
-	Miscellaneous: Docker, 3D Slicer
-	\item[Hardware] \tab Platforms: Linux, Arduino, Raspberry Pi, STM32, ESP32, FPGA\\
-	Robots: Manipulator, Ornithopter, UAV, USV, UGV\\ 
-	Sensors: RGB-D Camera, Force/Torque Sensor, Optical Tracker, Electromagnetic Tracker\\
-	Interfaces: Haptic Devices, Joysticks\\
-	Medical Imaging: Ultrasound
-\end{tablist}
-
-
-\section*{Languages}
-\begin{tablist}
-	\item[Chinese] \tab Mandarin -- Native
-	\item[English] \tab Professional Proficiency
-\end{tablist}
-\newpage
+%\newpage
 \section*{References}
 \begin{itemize}
 	\item \textbf{Prof. LI Zheng} ~{\scriptsize \faEnvelope}\href{mailto:zhengli@cuhk.edu.hk}{zhengli@cuhk.edu.hk}\\
-	Associate Professor\\
+	Professor\\
 	Department of Surgery\\
 	The Chinese University of Hong Kong
 	
-	\textit{Relationship: M.Phil. Supervisor.}
+	{M.Phil. Supervisor}
 
 	\vspace{1ex}
 	
 	\item \textbf{Prof. QIAN Huihuan (Alex)} ~{\scriptsize \faEnvelope}\href{mailto:hhqian@cuhk.edu.cn}{hhqian@cuhk.edu.cn}\\
 	Associate Professor\\School of Science and Engineering\\The Chinese University of Hong Kong, Shenzhen
 
-	\textit{Relationship: Undergraduate Final Year Project Supervisor.}
+	{B.Eng. Final Year Project Supervisor}
 
 \end{itemize}
 	
 % display today's date as Month Year after a vertical space below the end of the text
 \begin{center}
 	\vfill
-	Last update: \monthyeardate\today; \href{https://zixingjiang.com/cv/}{https://zixingjiang.com/cv/}
+	Last update: \monthyeardate\today
 \end{center}
 	
 \end{document}
