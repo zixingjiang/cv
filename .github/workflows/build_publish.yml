@@ -22,7 +22,7 @@ jobs:
           root_file: cv-zxjiang.tex
 
       - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: built-pdf
           path: cv-zxjiang.pdf    
